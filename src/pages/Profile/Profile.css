@@ -1,0 +1,253 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 100px 2rem;
+  background-color: var(--light-gray);
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+}
+
+.profile-sidebar {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  height: fit-content;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.user-brief {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  background: var(--light-gray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.profile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-nav button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: none;
+  background: none;
+  border-radius: 10px;
+  color: var(--dark-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-nav button:hover,
+.profile-nav button.active {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.logout-button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  border: 2px solid var(--primary-color);
+  background: none;
+  color: var(--primary-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.profile-content {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.edit-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.edit-button:hover {
+  transform: translateY(-2px);
+}
+
+.info-display {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+}
+
+.info-item .label {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.edit-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.save-button {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+}
+
+.orders-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.order-card {
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.order-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.order-status {
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.order-status.delivered {
+  background: #e6ffe6;
+  color: #008000;
+}
+
+.order-status.processing {
+  background: #fff3e6;
+  color: #ff8c00;
+}
+
+.order-items {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .profile-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+} 
